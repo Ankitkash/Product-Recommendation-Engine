@@ -83,5 +83,3 @@ This project implements a **hybrid recommendation system** combining multiple ma
 - Pickle
 
 ---
-
-## 📁 Project Structure
