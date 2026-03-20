@@ -10,10 +10,14 @@ import pickle
 # LOAD FILES
 # ================================
 
-df = pickle.load(open("data.pkl", "rb"))
-knn_model = pickle.load(open("knn_model.pkl", "rb"))
-scaler = pickle.load(open("scaler.pkl", "rb"))
-kmeans = pickle.load(open("kmeans_model.pkl", "rb"))
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+
+knn_model = pickle.load(open(os.path.join(BASE_DIR, "knn_model.pkl"), "rb"))
+scaler = pickle.load(open(os.path.join(BASE_DIR, "scaler.pkl"), "rb"))
+kmeans = pickle.load(open(os.path.join(BASE_DIR, "kmeans_model.pkl"), "rb"))
+df = pickle.load(open(os.path.join(BASE_DIR, "data.pkl"), "rb"))
 
 features = df[['stars', 'reviews', 'price', 'boughtInLastMonth']]
 scaled_features = scaler.transform(features)
