@@ -139,7 +139,7 @@ def ensemble_recommend(product_title):
 
 st.set_page_config(page_title="Product Recommender", layout="wide")
 
-st.title("🛒 Smart Product Recommendation Engine")
+st.title("🛒 Product Recommendation Engine")
 
 product_input = st.text_input("Enter Product Name")
 
